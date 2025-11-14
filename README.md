@@ -75,6 +75,32 @@ Each schedule you have configured in the Neo Smart Blinds app will appear as a `
 * Turning the switch **on** enables the schedule in the cloud.
 * Turning the switch **off** disables the schedule in the cloud.
 
+## Security Considerations
+
+This integration communicates with the Neo Smart Blinds cloud API and stores your account credentials. Please review the following security information:
+
+### Data Storage
+* Your Neo Smart Blinds account credentials (email and password) are stored in Home Assistant's configuration
+* All communication with the API uses HTTPS encryption
+* Ensure your Home Assistant instance is properly secured with authentication
+
+### Cloud Dependency
+* This integration **requires** internet connectivity and relies entirely on the Neo Smart Blinds cloud service
+* Commands and status updates will not work if the API is unavailable
+* There is no local/offline control mode
+
+### Best Practices
+* ✅ Use a strong, unique password for your Neo Smart Blinds account
+* ✅ Secure your Home Assistant instance with strong authentication
+* ✅ Use HTTPS when accessing Home Assistant remotely
+* ✅ Keep Home Assistant and this integration updated
+* ✅ Monitor logs for suspicious activity
+
+### Reporting Security Issues
+Please see [SECURITY.md](SECURITY.md) for information on how to responsibly report security vulnerabilities.
+
+For a complete security analysis, see [SECURITY_REVIEW.md](SECURITY_REVIEW.md).
+
 ## Credits
 
 * Original code by [@MrToast99](https://github.com/MrToast99).
